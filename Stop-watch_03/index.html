@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Momentum Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stopwatch-card" aria-label="Stopwatch">
+        <div class="status-row">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div class="status-text">
+            <span class="label">Status</span>
+            <span class="value">Ready</span>
+          </div>
+        </div>
+        <div class="time-display" aria-live="polite">
+          <span class="time hours">00</span>
+          <span class="divider">:</span>
+          <span class="time minutes">00</span>
+          <span class="divider">:</span>
+          <span class="time seconds">00</span>
+          <span class="milliseconds">.000</span>
+        </div>
+        <div class="timeline" aria-hidden="true">
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+          <span class="tick"></span>
+        </div>
+        <div class="controls" role="group" aria-label="Stopwatch controls">
+          <button class="btn btn-primary" data-action="start">Start</button>
+          <button class="btn" data-action="stop" disabled>Stop</button>
+          <button class="btn" data-action="reset" disabled>Reset</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
